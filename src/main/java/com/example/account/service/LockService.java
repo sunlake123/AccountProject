@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
-import org.redisson.spring.cache.RedissonCache;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
@@ -12,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class RedisTestService {
+public class LockService {
     private final RedissonClient redissonClient;
 
     public String getLock() {
